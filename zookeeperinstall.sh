@@ -12,9 +12,9 @@ ZOOKEEPER_VERSION="3.8.4"
 
 # ZooKeeper ensemble details
 ENSEMBLE_CONFIG="
-server.1=sjdcrradlkkfk1.ril.com:2888:3888
-server.2=sjdcrradlkkfk2.ril.com:2888:3888
-server.3=sjdcrradlkkfk3.ril.com:2888:3888"
+server.1=hostname1:2888:3888
+server.2=hostname2:2888:3888
+server.3=hostname3:2888:3888"
 
 if [ ${#HOSTNAMES[@]} -ne 3 ]; then
   echo "Please provide exactly 3 hostnames as arguments."
