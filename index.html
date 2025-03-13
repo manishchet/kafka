@@ -5,41 +5,105 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kafka Installation Guide</title>
     <style>
-        body { font-family: Arial, sans-serif; margin: 40px; }
-        h1 { color: #333; }
-        code { background: #f4f4f4; padding: 5px; }
+        /* Basic Reset */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        /* Body Styling */
+        body { 
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+            color: #333;
+            margin: 0;
+            padding: 20px;
+        }
+
+        /* Container */
+        .container {
+            max-width: 800px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Headers */
+        h1 {
+            text-align: center;
+            color: #007bff;
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            color: #0056b3;
+            margin-top: 20px;
+            border-bottom: 2px solid #007bff;
+            padding-bottom: 5px;
+        }
+
+        /* Paragraphs & Lists */
+        p, ul {
+            margin-bottom: 15px;
+            line-height: 1.6;
+        }
+
+        /* Code Blocks */
+        pre {
+            background: #272822;
+            color: #fff;
+            padding: 10px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+
+        code {
+            font-family: 'Courier New', monospace;
+        }
+
+        /* Footer */
+        .footer {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 0.9em;
+            color: #666;
+        }
     </style>
 </head>
 <body>
-    <h1>Kafka Installation Guide for On-Premise Systems</h1>
-    <p>This guide covers how to install Apache Kafka on an on-premise system.</p>
-    
-    <h2>1. Prerequisites</h2>
-    <ul>
-        <li>Linux-based OS (RHEL, Ubuntu, etc.)</li>
-        <li>Java 11 or later</li>
-        <li>Zookeeper</li>
-    </ul>
+    <div class="container">
+        <h1>Kafka Installation Guide for On-Premise Systems</h1>
+        <p>This guide covers how to install Apache Kafka on an on-premise system.</p>
+        
+        <h2>1. Prerequisites</h2>
+        <ul>
+            <li>Linux-based OS (RHEL, Ubuntu, etc.)</li>
+            <li>Java 11 or later</li>
+            <li>Zookeeper</li>
+        </ul>
 
-    <h2>2. Install Java</h2>
-    <pre><code>sudo yum install java-11-openjdk -y</code></pre>
+        <h2>2. Install Java</h2>
+        <pre><code>sudo yum install java-11-openjdk -y</code></pre>
 
-    <h2>3. Download and Extract Kafka</h2>
-    <pre><code>wget https://downloads.apache.org/kafka/3.5.0/kafka_2.13-3.5.0.tgz
-               tar -xvzf kafka_2.13-3.5.0.tgz
-               cd kafka_2.13-3.5.0
-    </code></pre>
+        <h2>3. Download and Extract Kafka</h2>
+        <pre><code>wget https://downloads.apache.org/kafka/3.5.0/kafka_2.13-3.5.0.tgz
+tar -xvzf kafka_2.13-3.5.0.tgz
+cd kafka_2.13-3.5.0</code></pre>
 
-    <h2>4. Start Zookeeper</h2>
-    <pre><code>bin/zookeeper-server-start.sh config/zookeeper.properties</code></pre>
+        <h2>4. Start Zookeeper</h2>
+        <pre><code>bin/zookeeper-server-start.sh config/zookeeper.properties</code></pre>
 
-    <h2>5. Start Kafka Server</h2>
-    <pre><code>bin/kafka-server-start.sh config/server.properties</code></pre>
+        <h2>5. Start Kafka Server</h2>
+        <pre><code>bin/kafka-server-start.sh config/server.properties</code></pre>
 
-    <h2>6. Create a Kafka Topic</h2>
-    <pre><code>bin/kafka-topics.sh --create --topic test-topic --bootstrap-server localhost:9092</code></pre>
+        <h2>6. Create a Kafka Topic</h2>
+        <pre><code>bin/kafka-topics.sh --create --topic test-topic --bootstrap-server localhost:9092</code></pre>
 
-    <h2>7. Verify Kafka Installation</h2>
-    <pre><code>bin/kafka-topics.sh --list --bootstrap-server localhost:9092</code></pre>
+        <h2>7. Verify Kafka Installation</h2>
+        <pre><code>bin/kafka-topics.sh --list --bootstrap-server localhost:9092</code></pre>
+
+        <div class="footer">
+            <p>© 2025 Kafka Installation Guide | Created by Your Name</p>
+        </div>
+    </div>
 </body>
 </html>
